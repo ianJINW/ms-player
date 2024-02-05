@@ -1,0 +1,237 @@
+body {
+  text-align: center;
+}
+* {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+}
+::-webkit-scrollbar {
+  visibility: hidden;
+  display: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  border-bottom: 1px dotted lightgrey;
+}
+.playName,
+.audio-place {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 67vw;
+}
+header input {
+  left: 10%;
+  outline: none;
+  background: local;
+  border: dashed 1px rgb(121, 112, 112);
+  border-radius: 5px;
+  width: 300px;
+  font-style: italic;
+}
+.audio ul {
+  overflow-y: scroll;
+  height: 64dvh;
+}
+.audio input {
+  width: 90vw;
+  height: 2px;
+}
+.audio::-webkit-scrollbar {
+  display: none;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+.audio-place {
+  margin-left: 20px;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.audio-place {
+  margin: 0;
+}
+.caret {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+input[type='range'] {
+  width: 100%;
+  margin-top: 10px;
+}
+input[type='range']::-webkit-slider-track {
+  width: 1px;
+  background-color: beige;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 1px;
+}
+.audio,
+.play {
+  overflow-y: scroll;
+  height: 78dvh;
+  transition: all 1s ease-in-out;
+}
+.audio {
+  text-align: start;
+}
+.video {
+  height: 78dvh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.video main {
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1;
+}
+.video main video {
+  max-width: 650px;
+  max-height: 350px;
+}
+.video {
+  display: flex;
+  flex-direction: column;
+}
+.videos {
+  overflow-y: scroll;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.play {
+  justify-items: center;
+  align-items: center;
+  height: 78dvh;
+}
+.play::-webkit-scrollbar {
+  display: none;
+}
+i:active {
+  transform: rotate(20deg);
+}
+i:hover {
+  transform: translateY(-2px);
+}
+.play input {
+  width: 90vw;
+  height: 2px;
+}
+.play img {
+  margin: 25px 0 25px 0;
+  border-radius: 50%;
+  width: 40dvh;
+  box-shadow: lightblue 0 5px 5px 12px;
+}
+.play input[type='range'] {
+  margin: 5dvh 0;
+}
+.display {
+  display: none;
+}
+.activated {
+  transform: scale(0.8);
+  background: linear-gradient(to bottom left, orangered, rgb(0, 0, 0));
+  border-radius: 50px;
+  margin-bottom: 2px whitesmoke;
+  transform: translateY(-6px);
+  border: 20px 5px 5px 5px;
+  transition: all 0.8s ease-in-out;
+}
+footer {
+  margin-bottom: -10px;
+  border-top: 1px dotted lightsteelblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 10dvh;
+  background-color: black;
+  outline: bisque;
+  width: 100vw;
+  color: aliceblue;
+}
+footer div:hover {
+  transform: scale(0.8);
+  background: linear-gradient(to bottom left, rgb(54, 54, 83), orangered);
+  transition: all 0.8s ease-in-out;
+}
+footer div:hover p {
+  visibility: visible;
+}
+footer div p {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  color: bisque;
+  visibility: collapse;
+  transition: all 0.7s ease-in-out;
+}
+footer div {
+  height: 8dvh;
+  width: 6vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 30px 5px 30px;
+  border-radius: 50px;
+  outline: none;
+  font-size: large;
+  cursor: pointer;
+  justify-content: center;
+}
+footer div:hover {
+  transform: translateY(-10px);
+}
+footer div:hover i {
+  transform: translateY(-9px);
+}
+li,
+figure,
+i,
+h3,
+figcaption {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .video main video {
+    width: 90vw;
+  }
+  .video main {
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+.dark {
+  background: linear-gradient(to bottom, black, darkblue);
+  color: azure;
+}
+.light {
+  background: linear-gradient(to bottom, rgb(154, 175, 175), beige);
+  color: rgb(3, 31, 31), 26, 26;
+}
+.bg {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
