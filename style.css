@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
 }
 * {
   font-family: 'Times New Roman', Times, serif;
@@ -162,7 +164,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 10dvh;
+  top: 90vh;
   background-color: black;
   outline: bisque;
   width: 100vw;
@@ -178,7 +180,9 @@ footer div:hover p {
 }
 footer div p {
   position: absolute;
+  flex-direction: column;
   top: 15px;
+  left: 38%;
   display: flex;
   justify-content: center;
   color: bisque;
@@ -190,6 +194,8 @@ footer div {
   width: 6vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 0 30px 5px 30px;
   border-radius: 50px;
@@ -226,7 +232,7 @@ figcaption {
   color: azure;
 }
 .light {
-  background: linear-gradient(to bottom, rgb(154, 175, 175), beige);
+  background: linear-gradient(to bottom, rgb(88, 117, 117), beige);
   color: rgb(3, 31, 31), 26, 26;
 }
 .bg {
@@ -234,4 +240,9 @@ figcaption {
   flex-direction: row;
   gap: 20px;
   justify-content: space-between;
+}
+.vid figcaption {
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
 }
